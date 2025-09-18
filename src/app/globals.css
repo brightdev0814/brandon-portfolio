@@ -403,3 +403,7 @@ a {
 .morph {
   animation: morph 3s ease-in-out infinite;
 }
+
+.MuiTimelineItem-root:nth-of-type(even) .MuiTimelineContent-root {
+  text-align: left !important;
+}

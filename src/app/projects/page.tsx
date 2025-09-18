@@ -26,8 +26,7 @@ import {
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { getProjectImage, generateProjectImage } from "../utils/imageUtils";
-import { draftMode } from "next/headers";
+import { generateProjectImage } from "../utils/imageUtils";
 
 const ProjectsPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -743,7 +742,7 @@ class UserController extends Controller
         selectedCategory === "All" || project.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
-  }, [searchTerm, selectedCategory]);
+  }, [searchTerm, selectedCategory, projects]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -751,17 +750,6 @@ class UserController extends Controller
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
       },
     },
   };

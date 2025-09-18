@@ -22,10 +22,7 @@ import {
   Work as WorkIcon,
   School as SchoolIcon,
   Flag as MilitaryIcon,
-  Code as CodeIcon,
-  Cloud as CloudIcon,
   Security as SecurityIcon,
-  Speed as SpeedIcon,
   Psychology as PsychologyIcon,
 } from "@mui/icons-material";
 import { Icon } from "@iconify/react";

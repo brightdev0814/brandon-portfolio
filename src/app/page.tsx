@@ -27,7 +27,6 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  getProjectImage,
   getProfileImage,
   generateProjectImage,
 } from "./utils/imageUtils";

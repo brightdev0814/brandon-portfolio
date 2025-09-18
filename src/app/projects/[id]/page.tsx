@@ -14,8 +14,6 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
-  useTheme,
-  useMediaQuery,
 } from '@mui/material';
 import {
   ArrowBack as ArrowBackIcon,
@@ -38,8 +36,6 @@ import { getProjectImages } from '../../utils/imageUtils';
 const ProjectDetailPage = () => {
   const params = useParams();
   const projectId = parseInt(params.id as string);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [selectedImage, setSelectedImage] = useState(0);
   const [videoOpen, setVideoOpen] = useState(false);
 

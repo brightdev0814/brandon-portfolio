@@ -89,7 +89,7 @@ const Testimonials = () => {
           </Typography>
           <Grid container spacing={4}>
             {testimonials.map((testimonial) => (
-              <Grid item xs={12} md={4} key={testimonial.id}>
+              <Grid size={{ xs: 12, md: 4 }} key={testimonial.id}>
                 <motion.div variants={itemVariants}>
                   <Card
                     sx={{
@@ -141,7 +141,7 @@ const Testimonials = () => {
                       </Box>
                       <Rating value={testimonial.rating} readOnly sx={{ mb: 2 }} />
                       <Typography variant="body1" color="text.secondary" sx={{ fontStyle: 'italic' }}>
-                        "{testimonial.text}"
+                        &quot;{testimonial.text}&quot;
                       </Typography>
                     </CardContent>
                   </Card>

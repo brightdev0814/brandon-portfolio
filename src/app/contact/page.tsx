@@ -177,7 +177,7 @@ const ContactPage = () => {
               color="text.secondary"
               sx={{ maxWidth: 600, mx: "auto" }}
             >
-              Ready to discuss your next project? Let's connect and build
+              Ready to discuss your next project? Let&apos;s connect and build
               something amazing together.
             </Typography>
           </motion.div>
