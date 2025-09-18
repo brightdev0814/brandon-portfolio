@@ -11,8 +11,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Brandon L. Clark - Senior Python Developer',
-  description: 'Seasoned Python Developer with 8+ years of experience in developing scalable enterprise integrations and cloud-based solutions.',
+  title: 'Brandon L. Clark - Senior Software Engineer',
+  description: 'Seasoned Python & MERN-stack Developer with 8+ years of experience in developing scalable enterprise integrations and cloud-based solutions.',
   keywords: 'Python Developer, AWS, API Development, Cloud Solutions, Enterprise Integration',
   authors: [{ name: 'Brandon L. Clark' }],
   openGraph: {
