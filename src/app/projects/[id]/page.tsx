@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import {
   Box,
   Container,
@@ -32,6 +32,28 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { getProjectImages } from '../../utils/imageUtils';
+
+interface IProject {
+  id: number;
+  title: string;
+  description: string;
+  longDescription: string;
+  images: string[];
+  videos: string[];
+  technologies: string[];
+  metrics: string;
+  category: string;
+  icon?: ReactElement;
+  challenges: string[];
+  solutions: string[];
+  codeSnippets: {
+    title: string;
+    language: string;
+    code: string;
+  }[];
+  githubUrl: string;
+  liveUrl: string;
+}
 
 const ProjectDetailPage = () => {
   const params = useParams();
@@ -925,7 +947,7 @@ class User extends Authenticatable
     },
   };
 
-  const project = projects[projectId as keyof typeof projects];
+  const project:IProject = projects[projectId as keyof typeof projects];
 
   if (!project) {
     return (
@@ -1006,7 +1028,7 @@ class User extends Authenticatable
                 <motion.div variants={itemVariants}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
                     <Box sx={{ color: 'primary.main', '& svg': { fontSize: 40 } }}>
-                      {project.icon}
+                      {project?.icon}
                     </Box>
                     <Chip
                       label={project.category}
